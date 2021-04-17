@@ -1,0 +1,47 @@
+.contacts {
+  padding: $gutter / 2 0;
+  font-size: 14px;
+  font-weight: 700;
+
+  &.accent {
+    background: $accent;
+    color: $black;
+  }
+
+  &.secondary {
+    background: $secondary;
+    color: $white;
+  }
+
+  &-text {
+    transition: $trs;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+.lang-text {
+  text-transform: uppercase;
+  transition: $trs;
+  opacity: 0.5;
+
+  & + & {
+    padding-left: 0.5rem;
+  }
+
+  @media (max-width: 320px) {
+    padding-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}

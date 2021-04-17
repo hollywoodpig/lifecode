@@ -1,0 +1,110 @@
+@import "libs";
+@import "fonts";
+@import "variables";
+@import "components/**/*";
+
+body {
+  min-width: 280px;
+  overflow-x: hidden;
+  font-family: $font, $system-font;
+  line-height: $line-height;
+  font-size: $font-size;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+small {
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+}
+
+::selection {
+  background: $accent;
+  color: $white;
+}
+
+.shadow {
+  box-shadow: 0 0.2rem 0.2rem rgba($black, 0.2);
+}
+
+.spacing {
+  margin-bottom: $gutter;
+}
+
+.spacing-md {
+  @include media-breakpoint-down(md) {
+    margin-bottom: $gutter;
+  }
+}
+
+.spacing-sm {
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $gutter;
+  }
+}
+
+.overlay {
+  background: rgba($black, 0.424);
+  backdrop-filter: blur(0.5rem);
+
+  transition: $trs;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  border-radius: $bdrs;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    border-radius: 0;
+  }
+}

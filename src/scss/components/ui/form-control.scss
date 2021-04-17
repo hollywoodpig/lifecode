@@ -1,0 +1,89 @@
+[class*="col"] {
+  .input,
+  .button {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.button {
+  border: none;
+  background: none;
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: $bdrs;
+  font-family: "_raleway", $system-font;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: $trs;
+
+  &.accent {
+    background: $accent-2;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 0.3rem rgba($accent-2, 0.3);
+    }
+  }
+
+  &.accent-2 {
+    background: $accent;
+    color: $white;
+    padding: 0.5rem 1rem;
+    font-family: "_lato", $system-font;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-1px);
+    }
+  }
+
+  &.secondary {
+    background: $secondary;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 0.3rem rgba($secondary, 0.25);
+    }
+  }
+}
+
+.input {
+  padding: 1rem;
+  border: 1px solid $border;
+  border-radius: $bdrs;
+  font-family: "_raleway", $system-font;
+  font-size: 14px;
+  text-align: center;
+
+  &::placeholder {
+    color: $border;
+    transition: $trs;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-item {
+    background: red;
+  }
+
+  &-text {
+    color: $border;
+    font-size: 12px;
+    padding-left: 0.5rem;
+  }
+}

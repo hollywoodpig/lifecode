@@ -1,0 +1,28 @@
+.feedback {
+  margin-top: 20rem;
+  background: rgba($accent, 0.5);
+  color: $border;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 10rem;
+  }
+
+  &-inner {
+    background: $white;
+    padding: 0 $gutter;
+  }
+
+  &-title {
+    color: $accent;
+    padding-bottom: 3rem;
+  }
+
+  &-agreement {
+    display: block;
+    text-align: right;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+}

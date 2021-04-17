@@ -1,0 +1,40 @@
+.hamburger {
+  $size: 1rem;
+  $height: 2px;
+
+  width: $size;
+  height: $size;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: $trs;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &-line {
+    display: block;
+    width: 100%;
+    height: $height;
+    background: $white;
+    border-radius: $bdrs;
+    transition: $trs;
+  }
+
+  &.active {
+    opacity: 0.75;
+    transform: translateY($height);
+
+    .hamburger-line {
+      &:nth-child(1) {
+        transform: translateY(#{$height}) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(calc(-#{$size / 2} + #{$height})) rotate(-45deg);
+      }
+    }
+  }
+}

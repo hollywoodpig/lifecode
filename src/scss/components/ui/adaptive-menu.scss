@@ -1,0 +1,64 @@
+.adaptive {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.adaptive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hamburger {
+    position: absolute;
+    right: $gutter;
+    top: $gutter;
+    transform: scale(1.44);
+  }
+}
+
+.adaptive-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $white;
+
+  li {
+    transition: $trs;
+    position: relative;
+
+    &:hover {
+      color: rgba($white, 0.75);
+    }
+  }
+
+  $li-gutter: 1.44rem;
+
+  li + li {
+    margin-top: $li-gutter;
+  }
+
+  li:not(:last-child) {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: $li-gutter / 2 * -1;
+      height: 1px;
+      background: $border;
+      opacity: 0.144;
+    }
+  }
+}
+
+body {
+  &.no-scroll {
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,19 @@
+.heading {
+  margin-bottom: 5rem;
+  word-break: break-all;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 3rem;
+  }
+
+  &-subtitle {
+    color: $gray-2;
+    padding-bottom: 0.5rem;
+    font-weight: 900;
+  }
+
+  &-title {
+    color: $gray-1;
+    font-family: "_playfair-display", $system-font;
+  }
+}

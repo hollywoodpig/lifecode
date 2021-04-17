@@ -1,0 +1,54 @@
+.services {
+  margin-top: 3rem;
+
+  &-item {
+    border-radius: $bdrs;
+    overflow: hidden;
+    background-color: $gray-2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: $black;
+      opacity: 0.65;
+      z-index: -1;
+      transition: $trs;
+    }
+
+    &:hover {
+      .services-title {
+        transform: translateY(-0.5rem);
+      }
+
+      &::after {
+        background: $accent;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4rem;
+    transition: $trs;
+    padding: 0 3rem;
+  }
+}

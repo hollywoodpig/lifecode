@@ -1,0 +1,16 @@
+@mixin font($name, $style, $weight, $url) {
+  @font-face {
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src: url($url) format("woff2");
+  }
+}
+
+@include font("_lato", normal, 300, "../fonts/lato-300.woff2");
+@include font("_lato", normal, 400, "../fonts/lato-400.woff2");
+@include font("_lato", normal, 700, "../fonts/lato-700.woff2");
+@include font("_lato", normal, 900, "../fonts/lato-900.woff2");
+@include font("_raleway", normal, 400, "../fonts/raleway-400.woff2");
+@include font("_raleway", normal, 700, "../fonts/raleway-700.woff2");
+@include font("_playfair-display", normal, 500, "../fonts/playfair-display-500.woff2");

@@ -1,0 +1,54 @@
+$modal-padding: $gutter / 2;
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $modal-padding;
+
+  .hamburger {
+    float: right;
+    margin: $modal-padding / 2 $modal-padding / 2 0 0;
+
+    &-line {
+      background: $black;
+    }
+  }
+}
+
+.modal-window {
+  background: $white;
+  border-radius: $bdrs;
+}
+
+.modal-content {
+  max-width: 25rem;
+  padding: $gutter 4rem $modal-padding 4rem;
+  display: inline-flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(sm) {
+    padding: $modal-padding 2rem $modal-padding 2rem;
+  }
+
+  h4 {
+    padding-bottom: $modal-padding;
+    text-align: center;
+  }
+
+  .checkbox {
+    margin-bottom: $modal-padding;
+  }
+}
+
+.modal-item {
+  margin-top: $modal-padding;
+}

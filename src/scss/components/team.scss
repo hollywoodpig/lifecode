@@ -1,0 +1,135 @@
+@mixin beforeAndAfter($angle) {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $accent;
+    clip-path: polygon(0 $angle, 100% 0, 100% 100% - $angle, 0% 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($accent, 0.3);
+    clip-path: polygon(0 0, 100% $angle, 100% 100%, 0 100% - $angle);
+    z-index: -1;
+  }
+}
+
+.team {
+  margin-top: 6rem;
+  padding: 8rem 0;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    @include beforeAndAfter(2%);
+  }
+
+  @include media-breakpoint-up(md) {
+    @include beforeAndAfter(10%);
+  }
+
+  .team-about {
+    @include media-breakpoint-up(xl) {
+      margin-right: $gutter * 1.5;
+    }
+  }
+}
+
+.team-about {
+  background: $white;
+  border-radius: $bdrs;
+  padding: $gutter * 1.5;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+
+  @include media-breakpoint-down(sm) {
+    padding: $gutter * 1.5 $gutter;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    border-radius: inherit;
+    opacity: 0.5;
+    transform: rotate(-3deg);
+    z-index: -1;
+  }
+
+  .heading {
+    margin-bottom: 3rem;
+  }
+
+  .team-text {
+    font-size: 18px;
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 8rem;
+    }
+  }
+}
+
+.team-item {
+  border-radius: $bdrs;
+  overflow: hidden;
+  background-color: $gray-3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 100%;
+
+  &:hover {
+    .team-text-wrapper {
+      padding: $gutter / 1.5 0;
+      background: $white;
+    }
+  }
+
+  &.add {
+    .team-text-wrapper {
+      background: transparent;
+      backdrop-filter: none;
+      padding: $gutter 0;
+      width: 75%;
+
+      .button {
+        margin-top: 1rem;
+        width: inherit;
+      }
+    }
+
+    .team-text {
+      font-size: 16px;
+    }
+  }
+}
+
+.team-text-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba($white, 0.856);
+  backdrop-filter: brightness(144%);
+  padding: $gutter / 2 0;
+  transition: $trs;
+}
+
+.team-text {
+  font-size: 14px;
+}

@@ -1,0 +1,185 @@
+@mixin beforeAndAfter($angle) {
+  clip-path: polygon(0 0, 100% 0, 100% $angle, 0% 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($black, 0.144);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($white, 0.8);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% $angle);
+    transform: scale(-1, -1) translateY(-#{$angle});
+  }
+}
+
+.header {
+  background: url("../img/first-screen.jpg") no-repeat bottom / cover;
+  color: $white;
+  padding: $gutter 0 $gutter * 4 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  @include beforeAndAfter(85%);
+
+  @include media-breakpoint-down(md) {
+    padding: $gutter 0 $gutter * 5 0;
+  }
+
+  .logo {
+    display: block;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background: $white;
+        transform: translateX($gutter / 2);
+      }
+    }
+  }
+
+  .frame {
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    .hamburger {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  width: 100%;
+
+  &-item {
+    &:first-child {
+      margin-right: auto;
+    }
+
+    & + & {
+      padding-left: $gutter;
+    }
+  }
+
+  &-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background: $white;
+      transition: $trs;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.logo {
+  svg {
+    display: block;
+
+    circle {
+      fill: $accent;
+    }
+
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.frame {
+  width: 768px;
+  max-width: 100%;
+
+  .frame-text-outside {
+    text-align: right;
+    padding-bottom: 0.2rem;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0.5rem;
+    }
+
+    @media (max-width: 320px) {
+      text-align: center;
+    }
+  }
+
+  &-header {
+    border-radius: $bdrs $bdrs 0 0;
+    border: 5px solid $white;
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 1rem;
+
+    .frame-text {
+      padding-left: 1rem;
+    }
+  }
+
+  &-content {
+    border-radius: 0 0 $bdrs $bdrs;
+    border: 5px solid $white;
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $gutter 5rem 0.5rem 5rem;
+
+    @include media-breakpoint-down(sm) {
+      padding: $gutter 2rem 1rem 2rem;
+    }
+  }
+
+  &-control {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: $white;
+    transform: translateY(-10%);
+
+    & + & {
+      margin-left: 0.5rem;
+    }
+  }
+}

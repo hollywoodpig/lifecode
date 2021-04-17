@@ -1,0 +1,17 @@
+$accent: #fecc00;
+$accent-2: adjust-color($accent, -10, -5, 80);
+$secondary: #4f4f4f;
+$gray-1: #323232;
+$gray-2: #c4c4c4;
+$gray-3: #ebebeb;
+$border: #bebebe;
+$white: #fff;
+$black: #000;
+$system-font: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+$font: "_lato";
+$line-height: 1.4;
+$font-size: 16px;
+$trs: 0.3s ease;
+$bdrs: 0.2rem;
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;

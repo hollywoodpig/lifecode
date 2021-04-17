@@ -1,0 +1,117 @@
+.reviews {
+  margin-top: 10rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 6rem;
+  }
+}
+
+.review {
+  background: $gray-3;
+  padding: 3rem 6rem;
+  border-radius: $bdrs;
+  display: flex;
+  flex-direction: column;
+
+  .review-text {
+    font-weight: 300;
+    font-size: 18px;
+
+    @include media-breakpoint-down(sm) {
+      order: 1;
+    }
+  }
+
+  .review-name {
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  .review-author {
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .review-img,
+  .review-author {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $gutter / 2;
+    }
+  }
+
+  .review-position {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 1.5rem 3rem;
+
+    .review-author {
+      margin-top: $gutter;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: $gutter / 2;
+
+    .review-author {
+      margin-top: 0;
+    }
+  }
+}
+
+.review-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.review-author {
+  margin-top: $gutter * 2;
+  display: flex;
+  align-items: center;
+
+  .review-img {
+    margin-right: $gutter;
+  }
+}
+
+.swiper-pagination {
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 3rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $gutter;
+  }
+
+  &-bullet {
+    width: 0.75rem;
+    height: 0.75rem;
+    opacity: 0.5;
+    background: $accent-2;
+    transition: $trs;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    & + & {
+      margin-left: $gutter;
+    }
+
+    &-active {
+      opacity: 1;
+      background: $accent-2;
+    }
+  }
+}
