@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="page">
+    <%- include('components/ui/adaptive-menu') %>
+
+    <%- include('components/contacts', { theme: 'accent' }) %>
+
+    <div class="container">
+        <%- include('components/ui/nav') %>
+        <%- include('components/ui/heading', { subtitle: '', title: 'Наш Блог' }) %>
+        <div class="row">
+            <div class="col-12">
+                <section class="articles">
+                    <article class="article">
+                        <img class="article-img" height="320" src="img/article.png" alt="">
+                        <div class="article-content">
+                            <h4 class="article-title">Пишем кастомный Select на C++</h4>
+                            <p class="article-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt lobortis massa, vitae porttitor massa dignissim et. Aenean sodales mi in risus lobortis, ut molestie risus euismod. Nulla non tellus diam. Nulla lacinia risus vel purus ornare congue. Mauris sagittis at diam sed congue. Nulla imperdiet nec risus a tincidunt. Mauris eu elementum enim.
+                            </p>
+                            <div class="article-controls">
+                                <a href="#" class="button accent-2 shadow">Показать ещё</a>
+                                <div class="article-categories">
+                                    <b>Категории</b>
+                                    <a href="#">JavaScript</a>
+                                    <a href="#">Верстка</a>
+                                </div>
+                                <div class="article-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                        <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
+                                    </svg>
+                                    <span>144</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <img class="article-img" height="320" src="img/article.png" alt="">
+                        <div class="article-content">
+                            <h4 class="article-title">Пишем кастомный Select на C++</h4>
+                            <p class="article-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt lobortis massa, vitae porttitor massa dignissim et. Aenean sodales mi in risus lobortis, ut molestie risus euismod. Nulla non tellus diam. Nulla lacinia risus vel purus ornare congue. Mauris sagittis at diam sed congue. Nulla imperdiet nec risus a tincidunt. Mauris eu elementum enim.
+                            </p>
+                            <div class="article-controls">
+                                <a href="#" class="button accent-2 shadow">Показать ещё</a>
+                                <div class="article-categories">
+                                    <b>Категории</b>
+                                    <a href="#">JavaScript</a>
+                                    <a href="#">Верстка</a>
+                                </div>
+                                <div class="article-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                        <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
+                                    </svg>
+                                    <span>144</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <img class="article-img" height="320" src="img/article.png" alt="">
+                        <div class="article-content">
+                            <h4 class="article-title">Пишем кастомный Select на C++</h4>
+                            <p class="article-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt lobortis massa, vitae porttitor massa dignissim et. Aenean sodales mi in risus lobortis, ut molestie risus euismod. Nulla non tellus diam. Nulla lacinia risus vel purus ornare congue. Mauris sagittis at diam sed congue. Nulla imperdiet nec risus a tincidunt. Mauris eu elementum enim.
+                            </p>
+                            <div class="article-controls">
+                                <a href="#" class="button accent-2 shadow">Показать ещё</a>
+                                <div class="article-categories">
+                                    <b>Категории</b>
+                                    <a href="#">JavaScript</a>
+                                    <a href="#">Верстка</a>
+                                </div>
+                                <div class="article-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                        <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
+                                    </svg>
+                                    <span>144</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article">
+                        <img class="article-img" height="320" src="img/article.png" alt="">
+                        <div class="article-content">
+                            <h4 class="article-title">Пишем кастомный Select на C++</h4>
+                            <p class="article-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt lobortis massa, vitae porttitor massa dignissim et. Aenean sodales mi in risus lobortis, ut molestie risus euismod. Nulla non tellus diam. Nulla lacinia risus vel purus ornare congue. Mauris sagittis at diam sed congue. Nulla imperdiet nec risus a tincidunt. Mauris eu elementum enim.
+                            </p>
+                            <div class="article-controls">
+                                <a href="#" class="button accent-2 shadow">Показать ещё</a>
+                                <div class="article-categories">
+                                    <b>Категории</b>
+                                    <a href="#">JavaScript</a>
+                                    <a href="#">Верстка</a>
+                                </div>
+                                <div class="article-views">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                        <circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/>
+                                    </svg>
+                                    <span>144</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+    <%- include("components/footer") %>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

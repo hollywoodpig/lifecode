@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="page">
+    <%- include('components/ui/adaptive-menu') %>
+
+    <%- include('components/contacts', { theme: 'accent' }) %>
+
+    <div class="container">
+        <%- include('components/ui/nav') %>
+        <%- include('components/ui/heading', { subtitle: 'Ваши проекты', title: 'Наше портфолио' }) %>
+        <div class="row">
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+          <div class="col-lg-4 spacing">
+            <%- include('components/ui/portfolio-item') %>
+          </div>
+        </div>
+    </div>
+    <%- include('components/footer') %>
+  
+  <script src="js/app.js"></script>
+</body>
+</html>

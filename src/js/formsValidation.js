@@ -17,25 +17,31 @@ const validatePhoneMask = phoneMask => {
 // feedback
 
 const feedbackForm = document.querySelector('#feedback')
-const feedbackPhoneInput = feedbackForm.querySelector('#feedback-tel')
 
-const feedbackPhoneMask = phoneMask(feedbackPhoneInput)
+if (feedbackForm) {
+  const feedbackPhoneInput = feedbackForm.querySelector('#feedback-tel')
 
-feedbackForm.addEventListener('submit', e => {
-  if (!validatePhoneMask(feedbackPhoneMask)) {
-    e.preventDefault()
-  }
-})
+  const feedbackPhoneMask = phoneMask(feedbackPhoneInput)
+  
+  feedbackForm.addEventListener('submit', e => {
+    if (!validatePhoneMask(feedbackPhoneMask)) {
+      e.preventDefault()
+    }
+  })
+}
 
 // work
 
 const workForm = document.querySelector('#work')
-const workPhoneInput = workForm.querySelector('#work-tel')
 
-const workPhoneMask = phoneMask(workPhoneInput)
+if (workForm) {
+  const workPhoneInput = workForm.querySelector('#work-tel')
 
-workForm.addEventListener('submit', e => {
-  if (!validatePhoneMask(workPhoneMask)) {
-    e.preventDefault()
-  }
-})
+  const workPhoneMask = phoneMask(workPhoneInput)
+  
+  workForm.addEventListener('submit', e => {
+    if (!validatePhoneMask(workPhoneMask)) {
+      e.preventDefault()
+    }
+  })
+}

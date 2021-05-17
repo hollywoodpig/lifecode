@@ -66,6 +66,10 @@ button {
   font-weight: 700;
 }
 
+img {
+  max-width: 100%;
+}
+
 ::selection {
   background: $accent;
   color: $white;
@@ -106,5 +110,23 @@ button {
     pointer-events: all;
     transform: scale(1);
     border-radius: 0;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .container {
+    margin-bottom: auto;
+  }
+
+  .contacts {
+      margin-bottom: 3rem;
+  }
+
+  .nav {
+      margin-bottom: 5rem;
   }
 }

@@ -1,0 +1,48 @@
+.menu {
+  display: none;
+  width: 100%;
+
+  &-item {
+    &:first-child {
+      margin-right: auto;
+    }
+
+    & + & {
+      padding-left: $gutter;
+    }
+  }
+
+  &-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 1px;
+      background: $black;
+      transition: $trs;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  [data-hamburger-menu-open] {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}

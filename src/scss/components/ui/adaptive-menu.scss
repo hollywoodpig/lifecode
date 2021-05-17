@@ -18,6 +18,10 @@
     right: $gutter;
     top: $gutter;
     transform: scale(1.44);
+
+    &-line {
+      background: $white;
+    }
   }
 }
 

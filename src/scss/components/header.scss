@@ -40,20 +40,14 @@
   }
 
   .logo {
-    display: block;
-    position: relative;
+    &::before {
+      background: $white;
+    }
+  }
 
-    @include media-breakpoint-up(md) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 1px;
-        background: $white;
-        transform: translateX($gutter / 2);
-      }
+  .hamburger {
+    &-line {
+      background: $white;
     }
   }
 
@@ -61,52 +55,9 @@
     margin-top: 3rem;
   }
 
-  @include media-breakpoint-up(md) {
-    .hamburger {
-      display: none;
-    }
-
-    .menu {
-      display: flex;
-    }
-  }
-}
-
-.menu {
-  display: none;
-  width: 100%;
-
-  &-item {
-    &:first-child {
-      margin-right: auto;
-    }
-
-    & + & {
-      padding-left: $gutter;
-    }
-  }
-
-  &-link {
-    font-size: 14px;
-    text-transform: uppercase;
-    position: relative;
-
+  .menu-link {
     &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0;
-      height: 1px;
       background: $white;
-      transition: $trs;
-    }
-
-    &:hover {
-      &::before {
-        left: 0;
-        width: 100%;
-      }
     }
   }
 }

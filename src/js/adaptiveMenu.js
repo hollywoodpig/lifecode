@@ -18,7 +18,7 @@ adaptiveMenu.innerHTML = links.join(' ')
 
 // hamburger handle
 
-const hamburgerOpen = document.querySelector('.header .hamburger')
+const hamburgerOpen = document.querySelector('[data-hamburger-menu-open]')
 const hamburgerClose = document.querySelector('.adaptive .hamburger')
 
 hamburgerOpen.addEventListener('click', () => {

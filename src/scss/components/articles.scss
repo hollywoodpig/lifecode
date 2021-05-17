@@ -1,0 +1,17 @@
+.articles {
+    .article + .article {
+        margin-top: $gutter * 3;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -#{$gutter * 1.5 };
+            height: 1px;
+            background: $border;
+            border-radius: $bdrs;
+        }
+    }
+}

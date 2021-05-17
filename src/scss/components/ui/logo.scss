@@ -1,0 +1,17 @@
+.logo {
+  display: block;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      background: rgba($black, 0.5);
+      transform: translateX($gutter / 2);
+    }
+  }
+}

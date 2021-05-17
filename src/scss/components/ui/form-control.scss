@@ -18,6 +18,7 @@
   overflow: hidden;
   white-space: nowrap;
   transition: $trs;
+  user-select: none;
 
   &.accent {
     background: $accent-2;
@@ -63,6 +64,7 @@
   &::placeholder {
     color: $border;
     transition: $trs;
+    user-select: none;
   }
 
   &:focus {
