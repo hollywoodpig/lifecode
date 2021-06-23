@@ -3,6 +3,10 @@
   background: rgba($accent, 0.5);
   color: $border;
 
+  .row {
+    row-gap: $gutter / 2;
+  }
+
   @include media-breakpoint-down(md) {
     margin-top: 10rem;
   }

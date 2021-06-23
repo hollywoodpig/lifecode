@@ -45,3 +45,12 @@
     opacity: 1;
   }
 }
+
+.contacts .container {
+  flex-wrap: wrap;
+  gap: $gutter / 2;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+}

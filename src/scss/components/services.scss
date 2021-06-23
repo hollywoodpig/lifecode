@@ -34,6 +34,10 @@
     &:hover {
       .services-title {
         transform: translateY(-0.5rem);
+
+        @include media-breakpoint-down(sm) {
+          transform: translateY(-62.5%);
+        }
       }
 
       &::after {
@@ -47,8 +51,19 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 4rem;
+    top: 8rem;
     transition: $trs;
     padding: 0 3rem;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      top: 4rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
   }
 }

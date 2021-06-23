@@ -42,6 +42,10 @@ li {
 
 h2 {
   font-size: 48px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -79,20 +83,16 @@ img {
   box-shadow: 0 0.2rem 0.2rem rgba($black, 0.2);
 }
 
-.spacing {
-  margin-bottom: $gutter;
-}
+.row {
+  row-gap: $gutter;
 
-.spacing-md {
-  @include media-breakpoint-down(md) {
-    margin-bottom: $gutter;
+  & + & {
+    margin-top: $gutter;
   }
 }
 
-.spacing-sm {
-  @include media-breakpoint-down(sm) {
-    margin-bottom: $gutter;
-  }
+.text-link {
+  text-decoration: underline;
 }
 
 .overlay {

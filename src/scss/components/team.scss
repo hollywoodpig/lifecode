@@ -29,6 +29,8 @@
   position: relative;
 
   @include media-breakpoint-down(md) {
+    padding: 12rem 0 8rem 0;
+
     @include beforeAndAfter(2%);
   }
 
@@ -47,6 +49,7 @@
   background: $white;
   border-radius: $bdrs;
   padding: $gutter * 1.5;
+  padding-bottom: $gutter * 3;
   height: 100%;
   position: relative;
   z-index: 2;
@@ -70,7 +73,7 @@
   }
 
   .heading {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .team-text {

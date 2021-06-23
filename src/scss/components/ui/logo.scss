@@ -2,6 +2,10 @@
   display: block;
   position: relative;
 
+  img {
+    width: 6rem;
+  }
+
   @include media-breakpoint-up(md) {
     &::before {
       content: "";

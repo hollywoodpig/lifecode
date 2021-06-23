@@ -49,3 +49,23 @@
     padding-bottom: 2rem;
   }
 }
+
+.portfolio-spoiler {
+  overflow: hidden;
+  transition: $trs;
+
+  &:not(.active) {
+    display: none;
+  }
+}
+
+.portfolio-spoiler-btn {
+  margin-top: $gutter;
+  max-height: 60px;
+
+  &.hidden {
+    max-height: 0;
+    padding: 0;
+    box-shadow: unset !important;
+  }
+}
